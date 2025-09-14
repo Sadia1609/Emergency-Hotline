@@ -13,15 +13,6 @@ function heartIcon(){
     setInnerText("heartCount", heart);
 }
 
-// copy
-function btnCopy(number) {
-    navigator.clipboard.writeText(number)  
-        .then(() => {
-            alert("Copied: " + number);
-            copy++;
-            setInnerText("copyCount", copy);
-        })
-    }
 
 //call btn
 function callBtn(number) {
@@ -31,9 +22,7 @@ function callBtn(number) {
     }
 
     coin -= 20;
-   setInnerText("coinCount", coin);
-
-   
+    document.getElementById("coin").innerText = coin;
     const cards = document.querySelectorAll("main section > div > div");
     let serviceName = "";
 
