@@ -38,8 +38,8 @@ function callBtn(serviceName, number) {
 
 const history = document.getElementById("historyList");
     const li = document.createElement("li");
-    const localTime = new Date();
-    li.innerText = serviceName + " " + number + " " + " at " + localTime.toLocaleString();
+    const localTime = new Date().toLocaleTimeString();
+    li.innerText = serviceName + " " + number + " " + " at " + localTime;
     history.appendChild(li);
 }
 
