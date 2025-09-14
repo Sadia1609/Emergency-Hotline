@@ -33,11 +33,11 @@
 
                 <div class="flex items-center gap-10 ">
 
-                    <span class="h-10 w-25 bg-[#41ff6b1a] rounded-3xl flex items-center justify-center font-extrabold gap-2">0 <span id="heart" class="h-7 w-7"><img src="assets/heart.png" alt=""></span></span>
+                    <span class="h-10 w-25 bg-[#41ff6b1a] rounded-3xl flex items-center justify-center font-extrabold gap-2"><span id="heartCount">0</span> <span id="heart" class="h-7 w-7"><img src="assets/heart.png" alt=""></span></span>
 
-                    <span class="h-10 w-25 bg-[#41ff6b1a] rounded-3xl flex items-center justify-center font-extrabold gap-2">100 <span id="coin" class="h-7 w-7"><img src="assets/coin.png" alt=""></span></span>
+                    <span class="h-10 w-25 bg-[#41ff6b1a] rounded-3xl flex items-center justify-center font-extrabold gap-2"><span id="coinCount">100</span> <span id="coin" class="h-7 w-7"><img src="assets/coin.png" alt=""></span></span>
 
-                    <span class="h-10 w-25 bg-[#00a63e] rounded-3xl flex items-center justify-center gap-1 text-white font-bold">0 <span id="copy">Copy</span></span>
+                    <span class="h-10 w-25 bg-[#00a63e] rounded-3xl flex items-center justify-center gap-1 text-white font-bold"><span id="copyCount">0</span> <span id="copy">Copy</span></span>
 
                 </div>
 
@@ -284,7 +284,11 @@
         </div>
 
         <button id="clearHistory" class="bg-[#00a63e] text-white px-5 py-2 rounded-3xl text-sm">Clear</button>
+
       </div>
+      <ul id="historyList" class="clear-list-item pl-5"></ul>
+     </div>
+    
     </main>
 
     <script src="script.js"></script>
