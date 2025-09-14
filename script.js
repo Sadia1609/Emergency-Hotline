@@ -24,7 +24,7 @@ function btnCopy(number) {
     }
 
 //call btn
-function callBtn(number) {
+function callBtn(serviceName, number) {
     if(coin < 20){
         alert("Not enough coin");
         return;
@@ -34,25 +34,12 @@ function callBtn(number) {
    setInnerText("coinCount", coin);
 
    
-    const cards = document.querySelectorAll("main section > div > div");
-    let serviceName = "";
-
-    for(let i = 0; i < cards.length; i++) {
-        const card = cards[i];
-
-        const pElement = card.querySelector("p");
-        if(pElement && pElement.innerText === number){
-            const h3 = card.querySelector("h3");
-            if(h3) serviceName = h3.innerText;
-            break;
-        }
-    }
-    alert("Calling: " + number + serviceName);
+    alert("Calling " + serviceName + " (" + number + ")");
 
 const history = document.getElementById("historyList");
     const li = document.createElement("li");
     const localTime = new Date();
-    li.innerText = "Called " + serviceName + number + " at " + localTime.toLocaleString();
+    li.innerText = serviceName + " " + number + " " + " at " + localTime.toLocaleString();
     history.appendChild(li);
 }
 
